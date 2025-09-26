@@ -10,12 +10,7 @@
 
     - name: Show hostname
       debug:
-        msg: "Hostname: {{ ansible_net_hostname }}"
-
-    - name: Show IOS version
-      debug:
-        msg: "Version: {{ ansible_net_version }}"
-    
-    - name: Show Model
-      debug:
-        msg: "Model: {{ ansible_net_model }}"
+        msg: 
+          - "Hostname: {{ ansible_net_hostname }}"
+          - "Version: {{ ansible_net_version }}"
+          - "Model: {{ ansible_net_model }}"
