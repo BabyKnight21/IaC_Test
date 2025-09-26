@@ -1,6 +1,12 @@
 ---
 - name: Set login banner
-  cisco.ios.ios_config:
+  cisco.ios.ios_banner:
     banner: login
-    text: "You have successfully entered this system"
+    multiline_delimiter: '%'
+    text: "
+      ############################################\n
+      #You have successfully entered this system#\n
+      #    Contact admin at admin@example.com   #\n
+      ###########################################
+    "
   state: present
