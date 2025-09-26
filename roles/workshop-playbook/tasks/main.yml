@@ -1,9 +1,9 @@
 ---
 #- name: "Task 1: Gather facts"
- # import_tasks: gather-facts.yaml
+#  import_tasks: gather-facts.yaml
  
-- name: "Task 2: Set login banner"
-  import_tasks: login-banner.yaml
+#- name: "Task 2: Set login banner"
+#  import_tasks: login-banner.yaml
 
 - name: "Task 3: Configure SNMP"
   import_tasks: config-snmp.yaml
