@@ -1,0 +1,8 @@
+---
+- name: Gather facts from all servers
+  hosts: all
+  gather_facts: yes   # enables fact gathering
+  tasks:
+    - name: Display all facts
+      debug:
+        var: ansible_facts
