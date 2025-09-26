@@ -1,6 +1,7 @@
 ---
 - name: Create user
   cisco.ios.ios_user:
-    name: User
-    nopassword: true
+    name: " {{ User }} "
+    configured_password: " {{ Pass }} "
     privilege: 15
+    state: present
