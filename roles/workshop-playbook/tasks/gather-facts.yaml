@@ -2,6 +2,7 @@
 - name: Gather facts from all servers
   hosts: cisco
   gather_facts: no   # skip default OS facts
+  connection: network_cli
   tasks:
     - name: Gather IOS facts
       cisco.ios.ios_facts:
