@@ -1,0 +1,9 @@
+---
+- name: Check router health
+  cisco.ios.ios_facts:
+    gather_subset: all
+
+- name: Display router health
+  debug:
+    msg:
+    - "Hostname: {{ ansible_net_hostname }} has {{ ansible_net_cpu_utilization }}"
