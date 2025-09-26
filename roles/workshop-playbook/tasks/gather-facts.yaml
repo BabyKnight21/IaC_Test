@@ -5,7 +5,7 @@
 
 - name: Show hostname
   debug:
-    msg: 
-    - "Hostname: {{ ansible_net_hostname }}"
-    - "Version: {{ ansible_net_version }}"
-    - "Model: {{ ansible_net_model }}"
+    msg: 'Hostname: {{ ansible_net_hostname }}'
+    # - "Hostname: {{ ansible_net_hostname }}"
+    # - "Version: {{ ansible_net_version }}"
+    # - "Model: {{ ansible_net_model }}"
