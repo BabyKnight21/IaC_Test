@@ -7,3 +7,11 @@
   debug:
     msg:
     - "Hostname: {{ ansible_net_hostname }} has {{ ansible_net_cpu_utilization }}"
+
+- name: Create stat of hosts to add to critical_inventory
+  when: not cpu_pass
+  set_stats:
+    date:
+      hosts_to_add: "{{ hosts_to_add | default([]) + [item] }}"
+    with_item:
+      -"{{ inventory_hostname }}"
