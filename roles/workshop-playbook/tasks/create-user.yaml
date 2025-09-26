@@ -1,0 +1,6 @@
+---
+- name: Create user
+  cisco.ios.ios_user:
+    name: User
+    nopassword: true
+    privilege: 15
