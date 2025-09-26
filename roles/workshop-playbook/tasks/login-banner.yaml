@@ -3,5 +3,8 @@
   cisco.ios.ios_banner:
     banner: login
     multiline_delimiter: '%'
-    text: "############################################\n"
+    text: "############################################\n
+      multiline login\nsadwq\n
+      email oiqwue@wqeqjiw.com
+      "
     state: present
