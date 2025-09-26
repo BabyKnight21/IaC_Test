@@ -1,7 +1,11 @@
 ---
+- name: Initialize vars_files
+  set_fact:
+    cpu_pass: "{{ cpu_pass | default('false') }}" 
+
 - name: Check router health
   cisco.ios.ios_facts:
-    gather_subset: all
+    gather_subset: hardware
 
 - name: Display router health
   debug:
