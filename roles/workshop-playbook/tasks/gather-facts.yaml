@@ -2,6 +2,7 @@
 - name: Gather facts from all servers
   cisco.ios.ios_facts:
     gather_subset: all
+    
 - name: Show hostname
   debug:
     msg:
