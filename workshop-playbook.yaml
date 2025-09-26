@@ -1,5 +1,6 @@
 ---
 - name: Workshop test
+  hosts: cisco
   gather_facts: yes
   vars_files:
     - "group_vars/all.yml"
