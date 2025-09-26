@@ -1,7 +1,7 @@
 ---
 - name: Gather facts from all servers
-  hosts: all
-  gather_facts: yes   # enables fact gathering
+  hosts: cisco
+  gather_facts: yes
   tasks:
     - name: Display all facts
       debug:
