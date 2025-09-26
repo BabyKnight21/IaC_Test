@@ -1,9 +1,15 @@
 ---
 - name: Gather facts from all servers
   hosts: cisco
-  gather_facts: yes
+  gather_facts: no   # skip default OS facts
   tasks:
-    - name: Display all facts
+    - name: Gather IOS facts
+      cisco.ios.ios_facts:
+
+    - name: Show hostname
       debug:
-        var: ansible_facts
-        msg: "This host {{inventory_hostname}} has hostname {{ ansible_facts['hostname'] }}"
+        msg: "Hostname: {{ ios_facts.net_hostname }}"
+
+    - name: Show IOS version
+      debug:
+        msg: "Version: {{ ios_facts.version }}"
