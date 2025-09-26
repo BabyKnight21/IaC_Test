@@ -6,3 +6,4 @@
     - name: Display all facts
       debug:
         var: ansible_facts
+        msg: "This host {{inventory_hostname}} has hostname {{ ansible_facts['hostname'] }}"
