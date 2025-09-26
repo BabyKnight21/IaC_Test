@@ -4,4 +4,4 @@
     banner: login
     multiline_delimiter: '%'
     text: "############################################\n"
-  state: present
+    state: present
